@@ -30,7 +30,7 @@
 }
 
 .rbc-header:last-child {
-  color: #2563eb;
+  color: #f15550;
 }
 .rbc-date-cell {
   text-align: right;
@@ -49,7 +49,7 @@
   height: 100%;
 }
 .rbc-show-more {
-  color: #2563eb;
+  color: #f15550;
   font-size: 12px;
   padding-left: 4px;
 }
