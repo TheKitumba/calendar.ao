@@ -80,7 +80,7 @@ export function Calendar() {
           {Array.from({ length: daysInMonth }).map((_, index) => (
             <button
               key={index}
-              className="aspect-square hover:scale-105 hover:shadow-2xl duration-75 transition-all rounded-2xl shadow-sm bg-neutral-200 cursor-pointer border flex items-start p-2 md:p-5 text-base md:text-4xl font-black"
+              className={`aspect-square hover:scale-105 hover:shadow-2xl duration-75 transition-all rounded-2xl shadow-sm bg-neutral-200 bg-gradient-to-b from-neutral-200 to-neutral-400 cursor-pointer border flex items-start p-2 md:p-5 text-base md:text-4xl font-black`}
             >
               {index + 1}
             </button>
