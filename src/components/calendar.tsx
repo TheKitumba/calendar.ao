@@ -47,20 +47,20 @@ export function Calendar() {
           Caledário.ao - {date.getFullYear()}
         </h1>
         <div className="flex items-center justify-between gap-3">
-          <button className="text-xl capitalize cursor-pointer h-14 flex items-center justify-center bg-neutral-300 px-6 border rounded-xl">
+          <button className="text-xl capitalize cursor-pointer h-14 flex items-center justify-center bg-neutral-300 px-6 border rounded-full">
             {format(date, "MMMM", {
               locale: pt,
             })}
           </button>
           <button
             onClick={handlePrevMonth}
-            className="size-14 bg-neutral-300 flex items-center justify-center rounded-xl border cursor-pointer"
+            className="size-14 bg-neutral-300 flex items-center justify-center rounded-full border cursor-pointer"
           >
             <ArrowLeft />
           </button>
           <button
             onClick={handleNextMonth}
-            className="size-14 bg-neutral-300 flex items-center justify-center rounded-xl border cursor-pointer"
+            className="size-14 bg-neutral-300 flex items-center justify-center rounded-full border cursor-pointer"
           >
             <ArrowRight />
           </button>
@@ -71,7 +71,7 @@ export function Calendar() {
       <div>
         <div className="grid grid-cols-7 border-collapse gap-4 px-3 md:px-10 pb-10">
           {daysOfTheWeek.map((item) => (
-            <button className="w-full bg-neutral-200 border rounded-xl h-14">
+            <button className="w-full bg-neutral-200 border rounded-full h-14">
               {item}
             </button>
           ))}
