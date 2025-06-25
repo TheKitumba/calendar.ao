@@ -44,7 +44,8 @@ export function Calendar() {
     <div className="h-full flex flex-col gap-6 py-10">
       <div className="flex items-center justify-between px-10">
         <h1 className="text-4xl md:text-7xl font-black text-center">
-          Caledário.ao - {date.getFullYear()}
+          Caledário.ao - {date.getFullYear()} -{" "}
+          {format(date, "MMMM", { locale: pt })}
         </h1>
         <div className="flex items-center justify-between gap-3">
           <button className="text-xl capitalize cursor-pointer h-14 flex items-center justify-center bg-neutral-300 px-6 border rounded-full">
