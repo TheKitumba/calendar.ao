@@ -165,12 +165,12 @@ export function Calendar() {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col mx-auto w-full px-4 md:px-8">
-        <div className="grid grid-cols-7 gap-2 md:gap-4 mb-4">
+      <div className="flex flex-col mx-auto w-full px-4 md:px-8">
+        <div className="grid grid-cols-7 gap-1 mb-4">
           {daysOfTheWeek.map((day, index) => (
             <div
               key={index}
-              className={`w-full backdrop-blur-sm border rounded-xl h-12 md:h-16 flex items-center justify-center shadow-sm ${
+              className={`w-full backdrop-blur-sm border h-12 md:h-16 flex items-center justify-center shadow-sm ${
                 isDarkMode
                   ? "bg-gray-800/80 border-gray-600"
                   : "bg-white/80 border-gray-200"
@@ -188,7 +188,7 @@ export function Calendar() {
           ))}
         </div>
 
-        <div className="grid grid-cols-7 gap-2 md:gap-4 flex-1">
+        <div className="grid grid-cols-7 gap-1 auto-rows-fr">
           {calendarDays.map((day, index) => {
             const isCurrentMonth = day.getMonth() === date.getMonth();
             const isCurrentDay = isToday(day);
@@ -196,9 +196,9 @@ export function Calendar() {
             return (
               <div
                 key={index}
-                className={`aspect-square rounded-2xl shadow-sm border cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg ${
+                className={`w-full aspect-square shadow-sm border cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg ${
                   isCurrentDay
-                    ? "bg-gradient-to-br from-red-500 to-red-600 text-white shadow-lg scale-105 border-red-400"
+                    ? "bg-gradient-to-br from-red-500 to-red-600 text-white shadow-lg border-red-400"
                     : isCurrentMonth
                     ? isDarkMode
                       ? "bg-gray-800/90 border-gray-600 hover:bg-gray-700/90"
